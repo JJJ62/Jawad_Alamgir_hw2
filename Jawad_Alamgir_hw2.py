@@ -2,7 +2,13 @@
 
 print("Welcome to the leap year program. Once you enter a year I will check if it's a leap year or not \n")
 
-year = input("Please enter the year you would like to check \n")
+exitstatus = 0
+while(exitstatus == 0)
+    year = input("Please enter the year you would like to check \n")
+    if(isdigit(year))
+        exitstatus = 1
+    else
+        print("INVALID INPUT!!! Please enter a valid integer\n")
 
 if(int(year) % 4 == 0):
     if(int(year) % 100 == 0):
